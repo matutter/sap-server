@@ -1,0 +1,14 @@
+type Resource {
+  _id: String
+  owner: String
+}
+
+type Query {
+  resource(_id:String): Resource
+  resources(_id:String, owner:String): [Resource]
+}
+
+type Mutation {
+  createResource(owner:String): Resource
+}
+
