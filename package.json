@@ -1,0 +1,30 @@
+{
+  "name": "sap-server",
+  "version": "1.0.0",
+  "description": "The Single Access Policy Server provides unique ownership of objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/matutter/sap-server.git"
+  },
+  "keywords": [
+    "ACL",
+    "SAP"
+  ],
+  "author": "matutter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matutter/sap-server/issues"
+  },
+  "homepage": "https://github.com/matutter/sap-server#readme",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.4.2",
+    "mongodb": "^3.2.7"
+  }
+}
