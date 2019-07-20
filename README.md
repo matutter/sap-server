@@ -25,4 +25,24 @@ mutation {
   }
 }
 
+mutation {
+  createDoc(text: "Hello world!") {
+    _id
+    text
+  }
+}
+
+mutation {
+  createResource(ref: "5d312c408d8ee556a6ee5ac1", owner: "mat") {
+    _id
+    owner
+    ref
+    doc {
+      text
+      _id
+    }
+  }
+}
+
+
 ```

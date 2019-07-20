@@ -1,14 +1,25 @@
+type User {
+  _id: String!
+  name: String
+}
+
 type Resource {
-  _id: String
-  owner: String
+  _id: String!
+  text: String
+  owner: User
 }
 
 type Query {
-  resource(_id:String): Resource
-  resources(_id:String, owner:String): [Resource]
+  findUser(_id:String): User
+  findUsers(name:String): [User]
+  findResource(_id:String): Resource
+  findResources(text:String): [Resource]
+  findResourcesByUser(_id:String!): [Resource]
 }
 
 type Mutation {
-  createResource(owner:String): Resource
+  addUser(name:String!): User
+  addResource(text:String!): Resource
+  setResourceOwner(user:String!, resource:String!): Boolean
+  removeResourceOwner(_id:String!): Boolean
 }
-
