@@ -10,7 +10,7 @@ type Resource {
 }
 
 type Query {
-  findUser(_id:String): User
+  findUser(name:String, _id:String): User
   findUsers(name:String): [User]
   findResource(_id:String): Resource
   findResources(text:String): [Resource]

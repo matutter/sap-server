@@ -4,7 +4,8 @@
   "description": "The Single Access Policy Server provides unique ownership of objects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/mocha/bin/mocha test --no-deprecation --exit",
+    "covtest": "./node_modules/.bin/nyc -r lcov npm test"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,10 @@
     "graphql": "^14.4.2",
     "mongoose": "^5.6.5"
   },
-  "db_options" : {
-    "useNewUrlParser": true
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "request": "^2.88.0"
   }
 }

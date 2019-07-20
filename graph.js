@@ -42,6 +42,7 @@ async function setResourceOwner(q, req, res) {
 }
 
 async function removeResourceOwner(q, req, res) {
+  debug("removeResourceOwner", q)
   let op = await ResourceLock.findOneAndDelete({ resource: q._id })
   if ( op )
     await Resource.findByIdAndUpdate(q._id, { $unset: { owner: true } })
@@ -49,7 +50,7 @@ async function removeResourceOwner(q, req, res) {
 }
 
 async function findUser(query) {
-  debug(`Find User:`, query)
+  debug(`findUser`, query)
   return await User.findOne(query)
 }
 
